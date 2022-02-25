@@ -1,0 +1,13 @@
+name: EECHO CICD
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  app-tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Dependencies
+      run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
