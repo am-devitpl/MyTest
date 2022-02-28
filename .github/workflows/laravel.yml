@@ -27,6 +27,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           username: ${{ secrets.SSH_USERNAME }}
+          port: ${{ secrets.PORT }}
           script: |
             cd /var/www/html/MyTest/
             git checkout -f 
